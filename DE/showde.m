@@ -1,0 +1,21 @@
+data1=importdata("deopt.out1");
+data2=importdata("deopt.out2");
+data3=importdata("deopt.out3");
+subplot(2,2,1)
+plot(1:length(data1),data1(1:end,2)/40*1000,1:length(data1),data1(1:end,3)/40*1000,'LineWidth',2)
+xlabel("structure number")
+ylabel("Energy per atom(mev)")
+legend("MD","DFT",'Location','Northwest')
+set(gca,'FontSize',26)
+subplot(2,2,2)
+plot(1:length(data2),data2(1:end,2)/40*1000,1:length(data2),data2(1:end,3)/40*1000,'LineWidth',2)
+xlabel("structure number")
+ylabel("Energy per atom(mev)")
+legend("MD","DFT",'Location','Northwest')
+set(gca,'FontSize',26)
+subplot(2,2,3)
+plot(1:length(data3),data3(1:end,2)/40*1000,1:length(data3),data3(1:end,3)/40*1000,'LineWidth',2)
+xlabel("structure number")
+ylabel("Energy per atom(mev)")
+legend("MD","DFT",'Location','Northwest')
+set(gca,'FontSize',26)
